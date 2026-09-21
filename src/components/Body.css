@@ -59,14 +59,14 @@
 .computer-hand {
     width: 200px;
     transform: rotateY(180deg);
-    margin-left: 40px;
+    margin-left: 150px;
 
 
 }
 
 .user-hand {
     width: 200px;
-    margin-right: 60px;
+    margin-right: 150px;
 }
 
 .button-div {
