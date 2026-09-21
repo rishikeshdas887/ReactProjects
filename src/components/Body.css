@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        background-color: rgb(244, 234, 234);
+}
+
+.App{
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-color: rgb(223, 135, 28);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.heading {
+    font-size: 50px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.4;
+    text-transform: uppercase;
+
+    /* Creates a vertical color gradient inside the text */
+    background: linear-gradient(to bottom, #ffea00 0%, #ff6a00 50%, #ff0055 100%);
+    
+
+    /* Multi-layered shadow simulates the retro 3D block style */
+    filter: drop-shadow(2px 2px 0px #000) drop-shadow(4px 4px 0px #00ffff) drop-shadow(6px 6px 0px #12005e);
+}
+
+.score-board {
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.choice{
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      gap: 180px;
+     flex-wrap: wrap; 
+}
+
+.computer-hand{
+    width: 200px;
+     transform:rotateY(180deg);
+     margin-left:40px;
+     
+
+}
+
+.user-hand{
+    width:200px;
+margin-right: 60px;
+}
+
+.button-div{
+    display: flex;
+    justify-content: center;
+    padding :25px;
+    gap:20px;
+  
+}
+.btn{
+    display: flex;
+    width:180px;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aqua;
+  font-size: 30px;
+    cursor:pointer;
+     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+  
+
+
+.btn:hover {
+    transform: translateY(-6px) scale(1.05);
+    background-color: #00ffff;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3), 0 0 12px #ff0055;
+}
+
+.btn:active {
+    transform: translateY(-2px) scale(0.95);
+    transition: transform 0.1s ease;
+}
+
+.result{
+    padding: 60px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.result h1 {
+    animation: popIn 0.4s ease;
+}
+
+@keyframes popIn {
+    0%   { transform: scale(0); opacity: 0; }
+    60%  { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+.result h2 {
+    animation: glowPulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+    from { text-shadow: 0 0 5px #ff0055; }
+    to   { text-shadow: 0 0 20px #ff0055, 0 0 30px #ffea00; }
+}
+
+/* restart button animation  */
+.button{
+
+width: 220px;
+    height: 55px;
+    font-size: 22px;
+  background-color: rgb(117, 145, 58);
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    animation: popIn 0.5s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+    transform: scale(1.08);
+    background-color: #00ffff;
+    box-shadow: 0 0 15px #00ffff, 0 0 25px #ff0055;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+@keyframes popIn {
+    0%   { transform: scale(0); opacity: 0; }
+    60%  { transform: scale(1.15); opacity: 1; }
+    100% { transform: scale(1); }
+}
